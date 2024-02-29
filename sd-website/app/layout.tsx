@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/styles/globals.css";
+import { Cookie } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
+const cookie = Cookie({ subsets: ["latin"], display: "swap", variable: "--font-cookie", weight: "400" });
 
 export const metadata: Metadata = {
   title: "Sweet Dreams",
@@ -34,7 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${cookie.variable} ${inter.className}`}>{children}</body>
     </html>
   );
 }

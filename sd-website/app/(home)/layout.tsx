@@ -6,7 +6,7 @@ export default async function RouteLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="mx-auto max-w-7xl">
+    <div>
       <Navbar />
       <div>{children}</div>
     </div>
